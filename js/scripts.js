@@ -5,18 +5,20 @@ const eta = prompt("Quanti anni hai?");
 const km = prompt ("Quanti km vuoi fare?"); 
 
 const etaInNumero = parseInt(eta);
-if (eta < 18) {
+const kmInNumero = parseInt(km);
 
-    fullPrice = (kmCost * km) - ((kmCost * km) * 20) / 100;
+if (etaInNumero < 18) {
+
+    fullPrice = (kmCost * kmInNumero) - ((kmCost * kmInNumero) * 20) / 100;
 
 }
 
-else if (eta > 65) {
-    fullPrice = (kmCost * km) - ((kmCost * km) * 40) / 100;
+else if (kmInNumero > 65) {
+    fullPrice = (kmCost * kmInNumero) - ((kmCost * kmInNumero) * 40) / 100;
 }
 
 else {
-    fullPrice = kmCost * km
+    fullPrice = kmCost * kmInNumero
 }
 
 /* console.log (fullPrice.toFixed(2)); */
